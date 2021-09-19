@@ -1,13 +1,19 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RootStateProvider } from '../src/stores/RootStateContext';
+import 'semantic-ui-css/semantic.min.css'
+import React from 'react';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RootStateProvider>
+      <App />
+    </RootStateProvider>
   </React.StrictMode>,
+
   document.getElementById('root')
 );
 
